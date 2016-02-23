@@ -8,7 +8,18 @@
 
     <div class="row">
         <div class="col-md-4">
-            <h2>Check Details</h2>
+            <h2>Check Details
+                <asp:GridView ID="gvCheck" OnRowDataBound="gvCheck_RowDataBound" AutoGenerateColumns="false"  runat="server" DataSourceID="odsCheck">
+                    <Columns>
+                        <asp:TemplateField>
+                            <ItemTemplate>
+                                <%#Eval("Name") %>
+                                <asp:GridView ID="gvCheckItems" runat="server"></asp:GridView>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                    </Columns>
+                </asp:GridView>
+            </h2>
             <p> </p>
             <p> </p>
         </div>
@@ -23,5 +34,7 @@
             <p> </p>
         </div>
     </div>
+
+    <asp:ObjectDataSource ID="odsCheck" runat="server" SelectMethod="GetCheck" TypeName="GregsCommon.CheckItem"></asp:ObjectDataSource>
 
 </asp:Content>
