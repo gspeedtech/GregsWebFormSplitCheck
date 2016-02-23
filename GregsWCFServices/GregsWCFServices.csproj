@@ -55,7 +55,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\GregsCommon\GregsCommon.csproj">
+    <ProjectReference Include="..\..\..\..\GitHub\GregsCommon\GregsCommon.csproj">
       <Project>{ec50b23c-b189-47a3-9a5f-82451e133abc}</Project>
       <Name>GregsCommon</Name>
     </ProjectReference>
